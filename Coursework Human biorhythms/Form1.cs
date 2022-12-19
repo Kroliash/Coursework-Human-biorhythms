@@ -17,6 +17,7 @@ namespace Coursework_Human_biorhythms
         private bool physicalIsVisible;
         private bool emotionalIsVisible;
         private bool intellectualIsVisible;
+        private bool cBox1, cBox2;
         private int i = 0, n = 30;
         private string name;
         Dictionary<string, DateTime> people = new Dictionary<string, DateTime>();
@@ -182,6 +183,26 @@ namespace Coursework_Human_biorhythms
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             emotionalIsVisible = !emotionalIsVisible;   
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cBox1 = true;
+            if (cBox2)
+            {
+                button2.Enabled = true;
+                button3.Enabled = true;
+            }            
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cBox2 = true;
+            if (cBox1)
+            {
+                button2.Enabled = true;
+                button3.Enabled = true;
+            }
         }
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
